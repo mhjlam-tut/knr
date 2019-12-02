@@ -28,10 +28,10 @@ void count(const char* str)
 
 int main()
 {
-	count("");								/* no input: 					0 0  0  */
-	count("\n\n\n\n");						/* only newlines: 				4 0  4  */
-	count(" \t \n\t   \t");					/* only blanks/tabs/newlines: 	1 0  9  */
-	count("test\ntest\ntest\ntest\n");		/* no blanks or tabs: 			4 4 20  */
-	count("test  \t  ");					/* word at beginning: 			0 1  9  */
-	count("  \t  test");					/* word after some blanks: 		0 1  9  */
+	count("");					/* no input: 			0 0  0  */
+	count("\n\n\n\n");				/* only newlines: 		4 0  4  */
+	count(" \t \n\t   \t");				/* only blanks/tabs/newlines: 	1 0  9  */
+	count("test\ntest\ntest\ntest\n");		/* no blanks or tabs: 		4 4 20  */
+	count("test  \t  ");				/* word at beginning: 		0 1  9  */
+	count("  \t  test");				/* word after some blanks: 	0 1  9  */
 }
